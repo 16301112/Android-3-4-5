@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".map">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000" >
+
+        <Button
+            android:id="@+id/driver_pre"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/background1"
+            android:onClick="nodeClick" />
+
+        <Button
+            android:id="@+id/driver_next"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="85dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/background2"
+            android:onClick="nodeClick" />
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+
+
+        <!--<Button
+            android:id="@+id/navigation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/navigation"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="150dp"
+            />-->
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

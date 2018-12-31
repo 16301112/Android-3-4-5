@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 在这里添加item-->
+    <item
+        android:id="@+id/generalMap"
+        android:icon="@color/colorAccent"
+        android:title="general map"></item>
+
+    <item
+        android:id="@+id/GDPMap"
+        android:icon="@color/colorAccent"
+        android:title="GDP map"></item>
+
+    <item
+        android:id="@+id/trafficMap"
+        android:icon="@color/colorAccent"
+        android:title="real time traffic status"></item>
+
+    <item
+        android:id="@+id/heatMap"
+        android:icon="@color/colorAccent"
+        android:title="heat map"></item>
+
+    <item
+        android:id="@+id/location"
+        android:icon="@color/colorAccent"
+        android:title="location"></item>
+
+    <item
+        android:id="@+id/cancelLocation"
+        android:icon="@color/colorAccent"
+        android:title="cancel location"></item>
+
+    <item
+        android:id="@+id/navigation"
+        android:icon="@color/colorAccent"
+        android:title="navigation"></item>
+
+</menu>

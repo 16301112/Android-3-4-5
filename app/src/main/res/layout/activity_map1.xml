@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".map1">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCFCFC" >
+
+    <RelativeLayout
+        android:id="@+id/driverb_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <!--<ImageButton
+            android:id="@+id/driver_inf"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/a"
+            />-->
+
+        <TextView
+            android:id="@+id/driver_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.TextureMapView
+        android:id="@+id/driver_mTexturemap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/driverb_layout" >
+    </com.baidu.mapapi.map.TextureMapView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@id/driverb_layout"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000"
+        android:gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/driver_pre"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/left"
+            android:backgroundTint="@color/colorGreen"
+            android:onClick="nodeClick" />
+
+        <Button
+            android:id="@+id/driver_next"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/right"
+            android:backgroundTint="@color/colorGreen"
+            android:onClick="nodeClick" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/driver_change"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/driverb_layout"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="70dp" />
+
+    <LinearLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="50dp"
+        android:background="#E0FFFF"
+        android:orientation="vertical" >
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="起点····终点"
+            android:textSize="16sp"
+            android:textStyle="bold" />-->
+
+        <EditText
+            android:id="@+id/driver_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/compass"
+            android:drawablePadding="5dp"
+            android:textColor="#303030"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/driver_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/compass"
+            android:drawablePadding="5dp"
+            android:hint="您要去哪儿"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/driver_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/colorGreen"
+                android:gravity="center"
+                android:onClick="searchButtonProcess"
+                android:text="驾车"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:padding="1dp"/>
+
+            <Button
+                android:id="@+id/transit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/colorGreen"
+                android:gravity="center"
+                android:onClick="searchButtonProcess"
+                android:text="大巴"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:padding="1dp"/>
+
+            <Button
+                android:id="@+id/walk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/colorGreen"
+                android:gravity="center"
+                android:onClick="searchButtonProcess"
+                android:text="步行"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:padding="1dp"/>
+
+            <Button
+                android:id="@+id/bike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/colorGreen"
+                android:gravity="center"
+                android:onClick="searchButtonProcess"
+                android:text="骑行"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:padding="1dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

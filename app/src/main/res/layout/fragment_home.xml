@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+
+    <RelativeLayout
+        android:id="@+id/homePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="60dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="欢迎来到体育馆"
+                    android:textSize="20dp"
+                    android:textStyle="italic"></TextView>
+                    -->
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    >
+                </com.daimajia.slider.library.SliderLayout>
+                <!-- android:layout_below="@id/welcome"-->
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="183dp"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <LinearLayout
+                        android:id="@+id/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff"
+                        android:layout_marginVertical="5dp"
+                        >
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="信息："
+                            />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="#73a3a6"
+                                android:textSize="20dp"
+                                android:text="无通知"/>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout="@id/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/info"
+                        android:background="#ffffff">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="105dp"
+                            android:orientation="horizontal">
+                            <Button
+                                android:id="@+id/tennis"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/item1"
+                                android:text="tennis"
+                                android:textSize="13dp"
+                                android:backgroundTint="@color/colorGreen"
+                                />
+                            <!--android:drawableTop="@drawable/item1"-->
+
+                            <Button
+                                android:id="@+id/ping"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/item2"
+                                android:text="ping-pong"
+                                android:textSize="13dp"
+                                android:backgroundTint="@color/colorGreen" />
+
+                            <Button
+                                android:id="@+id/basketball"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/item3"
+                                android:text="basketball"
+                                android:textSize="13dp"
+                                android:backgroundTint="@color/colorGreen"
+                               />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="105dp"
+                            android:orientation="horizontal">
+                            <Button
+                                android:id="@+id/billiards"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/item4"
+                                android:text="billiards"
+                                android:textSize="13dp"
+                                android:backgroundTint="@color/colorGreen"/>
+
+                            <Button
+                                android:id="@+id/bowling"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/item5"
+                                android:text="bowling"
+                                android:textSize="13dp"
+                                android:backgroundTint="@color/colorGreen"/>
+
+                            <Button
+                                android:id="@+id/skating"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/item6"
+                                android:text="skating"
+                                android:textSize="13dp"
+                                android:backgroundTint="@color/colorGreen"/>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="105dp"
+                            android:orientation="horizontal">
+                            <Button
+                                android:id="@+id/dumbbell"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/item7"
+                                android:text="dumbbell"
+                                android:textSize="13dp"
+                                android:backgroundTint="@color/colorGreen"/>
+
+                            <Button
+                                android:id="@+id/badminton"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/item8"
+                                android:text="badminton"
+                                android:textSize="13dp"
+                                android:backgroundTint="@color/colorGreen"/>
+
+                            <Button
+                                android:id="@+id/running"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/item9"
+                                android:text="running"
+                                android:textSize="13dp"
+                                android:backgroundTint="@color/colorGreen"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>
